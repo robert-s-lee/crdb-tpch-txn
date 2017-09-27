@@ -4,7 +4,6 @@ import (
     "database/sql"
     "bufio"
     "os"
-    "fmt"
     "log"
 
     _ "github.com/lib/pq"

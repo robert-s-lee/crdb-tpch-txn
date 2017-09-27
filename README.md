@@ -15,14 +15,21 @@ crdb-tpch-txn.py -l 1000 --dml upsert
 crdb-tpch-txn.py -l 1000 --dml ioc 
 crdb-tpch-txn.py -l 1000 --dml insert
 ```
- 
+
+- Compile 
+
+```bash
+javac senddb.java
+go build senddb.go
+```
+
 - Send to data with either Java or Python.  
 
 ```sql
-./crdb-tpch-txn.py -l 1000 --dml upsert | ./senddb.py
-./crdb-tpch-txn.py -l 1000 --dml upsert | java -cp ~/bin/postgresql-42.0.0.jar:./ senddb
-./crdb-tpch-txn.py -l 1000 --dml upsert | psql "postgres://127.0.0.1:26257/tpch?sslmode=disable&user=root"
-./crdb-tpch-txn.py -l 1000 --dml upsert | go run senddb.go
+time ./crdb-tpch-txn.py -l 1000 --dml upsert | ./senddb.py
+time ./crdb-tpch-txn.py -l 1000 --dml upsert | java -cp ~/bin/postgresql-42.0.0.jar:./ senddb
+time ./crdb-tpch-txn.py -l 1000 --dml upsert | psql "postgres://127.0.0.1:26257/tpch?sslmode=disable&user=root"
+time ./crdb-tpch-txn.py -l 1000 --dml upsert | ./senddb
 
 ```
 
