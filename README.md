@@ -22,6 +22,7 @@ crdb-tpch-txn.py -l 1000 --dml insert
 ./crdb-tpch-txn.py -l 1000 --dml upsert | ./senddb.py
 ./crdb-tpch-txn.py -l 1000 --dml upsert | java -cp ~/bin/postgresql-42.0.0.jar:./ senddb
 ./crdb-tpch-txn.py -l 1000 --dml upsert | psql "postgres://127.0.0.1:26257/tpch?sslmode=disable&user=root"
+./crdb-tpch-txn.py -l 1000 --dml upsert | go run senddb.go
 
 ```
 
