@@ -1,3 +1,5 @@
+#!/usr/local/bin/python3
+
 # Import the driver
 import psycopg2
 import sys

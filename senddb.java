@@ -3,7 +3,7 @@ import java.sql.*;
 
 /*
 You can compile and run this example with a command like:
-  javac senddn.java && 
+  javac senddb.java && 
   java -cp ~/bin/postgresql-42.0.0.jar:. senddb
 You can download the postgres JDBC driver jar from https://jdbc.postgresql.org.
 */
